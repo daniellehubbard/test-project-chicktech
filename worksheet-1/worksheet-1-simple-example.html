@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <!-- This is where we load JavaScript files that we need - here I'm loading bootstrap (a bunch of helpful classes
+    to make your websites look more modern and fancy!)-->
+    <meta charset="UTF-8" />
+    <title>ChickTech JavaScript</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--loading our CSS file-->
+    <link rel="stylesheet" type="text/css" href="../mystyle.css">
+
+</head>
+<body>
+
+<div>
+
+    <h1 class="text-center">I'm Danielle!</h1>
+        <!--The img-responsive class is from bootstrap - it tells the image to shrink to the size of the container its in-->
+    <div><img src="http://i.imgur.com/V2s1GO6.jpg" class="img-responsive center-block"></div>
+    <div>
+        <p class="text-center">I'm a Software Engineer at CDK Global. In my spare time I like to bake, try delicious Portland restaurants, travel when possible, and play with my baby nephew.</p>
+        <p class="text-center">I'm also a big fan of Harry Potter and Parks and Recreation. </p>
+        <p class="text-center">When I grow up I want to have a house with a kitchen big enough to hold all of the cooking gadgets that I want, plus a bulldog named Meatball.</p>
+    </div>
+
+</div>
+<!--The btn classes are also bootstrap - they determine the button's color (btn-primary), the button's size (btn-lg)-->
+<!--the center-block class is also from bootstrap - it tells the element to be centered on the page-->
+<div class="padding-bottom"><button type="button" class="btn btn-primary btn-lg center-block" onclick="onClick()">Let's play a game!</button></div>
+<!--Any javascript that you want on your page goes below-->
+<script type="text/javascript">
+
+    //this opens a new window when you click the button with our game html! Since an entire URL is not specified,
+    //it opens relative to your current path - if you are on www.mywebsite.com/index.html, this would go to
+    //www.mywebsite.com/phaser-project/game.html
+    var onClick = function() {
+        window.open('/phaser-project/game.html');
+    };
+
+
+</script>
+
+</body>
+</html>

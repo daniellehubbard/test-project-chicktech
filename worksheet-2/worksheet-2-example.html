@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ChickTech JavaScript</title>
+    <script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"></script>
+
+</head>
+<body>
+
+<script type="text/javascript">
+
+    var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+
+    function preload() {
+        //load images
+        game.load.image('water', '../assets/water.jpg');
+        game.load.image('hook', '../assets/fish-hook.png');
+        game.load.spritesheet('fish', '../assets/fish.png', 32, 40);
+    }
+
+    function create() {
+        var water = game.add.sprite(0, 0, 'water');
+
+
+        var hook = game.add.sprite(300, 300, 'hook');
+        hook.scale.setTo(.1,.1);
+
+        //use this if your image is not quite the size of the game
+        water.scale.setTo(2, 2);
+
+        player = game.add.sprite(32, 32, 'fish');
+
+    }
+
+    function update() {
+
+    }
+
+
+
+</script>
+
+</body>
+</html>
